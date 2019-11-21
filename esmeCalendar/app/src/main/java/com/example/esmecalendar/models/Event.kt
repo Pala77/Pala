@@ -7,6 +7,7 @@ class Event(var id: String,
             var type: String,
             var location: String,
             var teacher: String,
+            var url: String?,
             var information: String
             //TODO participant
             )

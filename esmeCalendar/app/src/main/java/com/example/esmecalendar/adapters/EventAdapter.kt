@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.example.esmecalendar.ItemClickListener
 import com.example.esmecalendar.R
 import com.example.esmecalendar.models.Event
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.event_item.view.*
 
 class EventAdapter (val items : ArrayList<Event>,
@@ -32,6 +33,9 @@ class EventAdapter (val items : ArrayList<Event>,
             itemClickListener.onClickItem(items.get(p1))
         }
 
+        p0.classroom.setOnClickListener {
+            itemClickListener.onClickClassRoom(items.get(p1).location)
+        }
     }
 
     // Gets the number of animals in the list
@@ -49,4 +53,5 @@ class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     val heure = view.heure
     val type = view.type
     val cardview = view.cardview
+    val image = view.image
 }
