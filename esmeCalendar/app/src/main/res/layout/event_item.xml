@@ -6,13 +6,20 @@
         android:id="@+id/cardview"
         android:elevation="10dp"
         android:layout_margin="8dp"
-        app:cardBackgroundColor="@color/colorAccent"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   android:id="@+id/image"
+                    />
 
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
@@ -69,16 +76,7 @@
                           android:textSize="30dp"
 
                           android:text="Debadier"/>
-
-
-
-
-
             </LinearLayout>
-
-
-
-
 
             <TextView android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
